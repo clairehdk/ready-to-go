@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Montserrat;
+}
+button {
+  font-family: Montserrat;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header  */
+
+header {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+header h1 {
+  font-size: 48px;
+  font-weight: 100;
+}
+header i {
+  color: #5c48d3;
+  margin-right: 50px;
+}
+.line {
+  width: 100%;
+  border: #e5e5e5 1px solid;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.buttons > div {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+}
+
+button {
+  width: 80px;
+  height: 50px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.button_on button {
+  background-color: white;
+  color: #5c48d3;
+  border: #908f8f 1px solid;
+  border-radius: 5px;
+  margin-right: 50px;
+}
+.button_off button {
+  background-color: #5c48d3;
   color: white;
+  border-radius: 5px;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.on {
+  background-color: #5c48d3;
+  color: white;
+  border-radius: 5px;
+  border: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.off {
+  background-color: white;
+  color: #5c48d3;
+  border: #908f8f 1px solid;
+  border-radius: 5px;
+  margin-right: 50px;
 }
