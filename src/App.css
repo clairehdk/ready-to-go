@@ -28,30 +28,28 @@ header i {
   width: 100%;
   border: #e5e5e5 1px solid;
 }
-
+button {
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
 .buttons {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  height: 400px;
+  height: 500px;
 }
 .buttons > div {
   display: flex;
+}
+.buttons > div > div {
+  display: flex;
   flex-direction: column;
-  justify-content: space-around;
 }
-
-button {
-  width: 80px;
-  height: 50px;
-  font-size: 20px;
-  margin-bottom: 30px;
-}
-
 .isactive {
   background-color: #5c48d3;
   color: white;
-  border-radius: 5px;
   border: none;
   margin-right: 50px;
 }
@@ -59,6 +57,35 @@ button {
   background-color: white;
   color: #5c48d3;
   border: #908f8f 1px solid;
-  border-radius: 5px;
   margin-right: 50px;
+}
+
+.red {
+  background-color: #d34948;
+  border: none;
+  color: white;
+  width: 200px;
+  height: 100px;
+  font-size: 25px;
+}
+.green {
+  background-color: #46ac4a;
+  border: none;
+  color: white;
+  width: 200px;
+  height: 100px;
+  font-size: 25px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer {
+  font-weight: 100;
+  font-size: 15px;
+}
+footer span {
+  font-weight: 400;
 }
