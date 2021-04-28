@@ -8,7 +8,9 @@ import Button from "./Button";
 import { useState } from "react";
 
 function App() {
-  const [className, setClassName] = useState("");
+  const [first, setFirst] = useState(false);
+  const [second, setSecond] = useState(false);
+  const [third, setThird] = useState(false);
 
   return (
     <div>
@@ -17,40 +19,37 @@ function App() {
         <h1>Ready To Go</h1>
       </header>
       <div className="line"></div>
-      <div className="buttons">
-        <div className="button_on">
-          <Button
-            className={className}
-            value="ON"
-            setClassName={setClassName}
-          />
-          <Button
-            className={className}
-            value="ON"
-            setClassName={setClassName}
-          />
-          <Button
-            className={className}
-            value="ON"
-            setClassName={setClassName}
-          />
-        </div>
-        <div className="button_off">
-          <Button
-            className={className}
-            value="OFF"
-            setClassName={setClassName}
-          />
-          <Button
-            className={className}
-            value="OFF"
-            setClassName={setClassName}
-          />
-          <Button
-            className={className}
-            value="OFF"
-            setClassName={setClassName}
-          />
+      <div>
+        <Button
+          className={first === false ? "deactivated" : "isactive"}
+          first={first}
+          setFirst={setFirst}
+          value="ON"
+        />
+
+        <Button
+          className={second === false ? "isactive" : "deactivated"}
+          second={second}
+          setSecond={setSecond}
+          value="OFF"
+        />
+
+        <button
+          onClick={() => {
+            setThird(true);
+            console.log("Je viens changer mon troisième state");
+          }}
+        >
+          Second Bouton
+        </button>
+        <div
+          className={
+            first === true && second === true && third === true
+              ? "green"
+              : "red"
+          }
+        >
+          Resultat
         </div>
       </div>
     </div>
@@ -58,3 +57,19 @@ function App() {
 }
 
 export default App;
+
+// <div>
+// <Button
+//   val={val}
+//   className="on"
+//   value="ON"
+//   setClassName={setClassName}
+// />
+// <Button className="on" value="ON" setClassName={setClassName} />
+// <Button className="on" value="ON" setClassName={setClassName} />
+// </div>
+// <div>
+// <Button className="off" value="OFF" setClassName={setClassName} />
+// <Button className="off" value="OFF" setClassName={setClassName} />
+// <Button className="off" value="OFF" setClassName={setClassName} />
+// </div>

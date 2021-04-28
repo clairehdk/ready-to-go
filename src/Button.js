@@ -1,14 +1,18 @@
 import React from "react";
 
-const Button = ({ value, className, setClassName }) => {
+const Button = ({ value, first, setFirst, second, setSecond }) => {
   return (
     <>
       <button
         onClick={() => {
-          if (value === "ON") {
-            setClassName(className === "off");
-          } else if (value === "OFF") {
-            setClassName(className === "on");
+          if (!first && !second) {
+            setFirst(true);
+            setSecond(true);
+          } else if (first && second) {
+            {
+              setFirst(false);
+              setSecond(false);
+            }
           }
         }}
       >
